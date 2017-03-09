@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeSystem.Tests", "LifeSystem.Tests\LifeSystem.Tests.csproj", "{96FE062E-2A1E-4C38-88B8-44AD929DF19F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypes", "..\DataTypes\DataTypes\DataTypes.csproj", "{C6621B0B-D7ED-48E2-89BA-82464F298B7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeSystem.GameHost", "..\LifeSystem.GameHost\LifeSystem.GameHost\LifeSystem.GameHost.csproj", "{B4A91BFE-93E2-4C29-AE38-A090295FF4CD}"
@@ -23,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{96FE062E-2A1E-4C38-88B8-44AD929DF19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96FE062E-2A1E-4C38-88B8-44AD929DF19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96FE062E-2A1E-4C38-88B8-44AD929DF19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96FE062E-2A1E-4C38-88B8-44AD929DF19F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6621B0B-D7ED-48E2-89BA-82464F298B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6621B0B-D7ED-48E2-89BA-82464F298B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6621B0B-D7ED-48E2-89BA-82464F298B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU

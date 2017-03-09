@@ -20,14 +20,13 @@ namespace LifeSystem.GameHost
         //    return new CompletedAsyncResult<string>(msg);
         //}
 
-        //public string EndServiceAsyncMethod(IAsyncResult r)
-        //{
-        //    CompletedAsyncResult<string> result = r as CompletedAsyncResult<string>;
-        //    Console.WriteLine("EndServiceAsyncMethod called with: \"{0}\"", result.Data);
-        //    return result.Data;
-        //}
+        public List<TaskResult> EndCalculateTask(IAsyncResult r)
+        {
+            CompletedAsyncResult<List<TaskResult>> result = r as CompletedAsyncResult<List<TaskResult>>;
+            return result.Data;
+        }
 
-        public List<TaskResult> CalculateTask(Task task)
+        public IAsyncResult CalculateTask(Task task, AsyncCallback callback, object asyncState)
         {
             int fieldWidth = task.Data.Width;
             int fieldHeight = task.Data.Height;
@@ -71,7 +70,7 @@ namespace LifeSystem.GameHost
                 });
             }
 
-            return results;
+            return new CompletedAsyncResult<List<TaskResult>>(results);
         }
 
         public void Convert2DTo1DArray(byte[,] field, byte[] resArray, int fieldWidth, int fieldHeight)

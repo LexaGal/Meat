@@ -15,15 +15,16 @@ namespace LifeSystem.GameHost
             ResponseFormat = WebMessageFormat.Json)]
         bool Ping(string hostId);
 
-        [OperationContract]
+        //[OperationContract]
+        [OperationContractAttribute(AsyncPattern = true)]
         [WebInvoke(Method = "POST", UriTemplate = "/api/task",
            ResponseFormat = WebMessageFormat.Json)]
-        List<TaskResult> CalculateTask(Task task);
+        IAsyncResult CalculateTask(Task task, AsyncCallback callback, object asyncState);
 
         //[OperationContractAttribute(AsyncPattern = true)]
         //IAsyncResult BeginServiceAsyncMethod(string msg, AsyncCallback callback, object asyncState);
 
-        //// Note: There is no OperationContractAttribute for the end method.
-        //string EndServiceAsyncMethod(IAsyncResult result);
+        // Note: There is no OperationContractAttribute for the end method.
+        List<TaskResult> EndCalculateTask(IAsyncResult result);
     }
 }

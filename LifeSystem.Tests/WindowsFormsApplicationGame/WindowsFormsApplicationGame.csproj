@@ -105,10 +105,6 @@
       <Project>{c6de0138-b7bb-4864-8e9e-ebfbd97dc927}</Project>
       <Name>LifeSystem.LoadBalancer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LifeSystem.Tests\LifeSystem.Tests.csproj">
-      <Project>{96FE062E-2A1E-4C38-88B8-44AD929DF19F}</Project>
-      <Name>LifeSystem.Tests</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

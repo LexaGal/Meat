@@ -100,8 +100,8 @@ namespace WindowsFormsApplicationGame
 
                 JavaScriptSerializer js = new JavaScriptSerializer();
                 string postData = js.Serialize(task);
-                string data = request.CreateRequest(_gameAddress, postData, "task");
-
+                string data = request.CreateRequest(postData, "task");
+                //_gameAddress,
                 List<TaskResult> taskResults = js.Deserialize<List<TaskResult>>(data);
 
                 var taskResult = taskResults[0];
